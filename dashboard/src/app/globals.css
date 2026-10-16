@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+	color-scheme: light;
+	--paper: #f7f4eb;
+	--ink: #282923;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: var(--paper);
+	background-image:
+		radial-gradient(ellipse at 12% 8%, rgb(255 255 255 / 72%), transparent 34rem),
+		repeating-linear-gradient(0deg, rgb(95 83 57 / 2%) 0, rgb(95 83 57 / 2%) 1px, transparent 1px, transparent 4px);
+	color: var(--ink);
+}
+
+.amp-header {
+	isolation: isolate;
+	overflow: hidden;
+	border: 1px solid #94958d;
+	background-color: #c4c4bd;
+	background-image:
+		linear-gradient(105deg, rgb(255 255 255 / 40%), transparent 25%, rgb(255 255 255 / 23%) 48%, transparent 73%, rgb(83 84 79 / 10%)),
+		repeating-linear-gradient(95deg, rgb(72 73 67 / 8%) 0, rgb(72 73 67 / 8%) 1px, transparent 1px, transparent 3px),
+		linear-gradient(180deg, #d0d0c9 0%, #b8b9b2 52%, #c9c9c2 100%);
+	box-shadow: inset 0 1px rgb(255 255 255 / 72%), inset 0 -2px rgb(80 82 76 / 16%), 0 5px 12px rgb(48 47 39 / 9%);
+}
+
+.amp-header::after {
+	position: absolute;
+	z-index: 0;
+	inset: 0;
+	background: repeating-linear-gradient(0deg, transparent 0, rgb(255 255 255 / 12%) 1px, transparent 2px, transparent 5px);
+	content: "";
+	pointer-events: none;
+}
+
+.amp-rivet {
+	position: absolute;
+	z-index: 2;
+	width: 9px;
+	height: 9px;
+	border: 1px solid #898a83;
+	border-radius: 50%;
+	background: linear-gradient(145deg, #f2f1eb, #979992);
+	box-shadow: inset 0 1px 1px rgb(255 255 255 / 80%), 0 1px 2px rgb(0 0 0 / 18%);
+}
+
+.amp-rivet-top-left {
+	top: 10px;
+	left: 10px;
+}
+
+.amp-rivet-bottom-left {
+	bottom: 10px;
+	left: 10px;
+}
+
+.scoreboard-net {
+	background-color: #aec6cf;
+	background-image: linear-gradient(135deg, rgb(255 255 255 / 24%), transparent 58%), repeating-linear-gradient(0deg, transparent 0, rgb(48 76 84 / 4%) 1px, transparent 2px, transparent 5px);
+}
+
